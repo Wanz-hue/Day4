@@ -24,19 +24,19 @@ function renderBlog() {
   document.getElementById("blogs").innerHTML = "";
   for (let i in blogs) {
     document.getElementById("blogs").innerHTML += `
-    <a href="./detail.html">
     <div class="box-blog1">
       <img
         src="${blogs[i].image}"
         class="image"
         alt=""
       /> 
+      <a href="./detail.html">
       <h3>${blogs[i].project}</h3>
+      </a>
       <p>
         ${blogs[i].description}
       </p>
     </div>
-    </a>
         `;
   }
 }
