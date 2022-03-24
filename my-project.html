@@ -3,6 +3,7 @@
     <title>My Project</title>
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
   </head>
 
   <body>
@@ -55,31 +56,53 @@
         <label for="input-description" class="label">Description</label>
         <textarea id="input-description" class="input-email"></textarea>
       </div>
+      <!-- Description -->
 
       <!-- Checkbox -->
       <div style="margin-top: 15px">
         <label class="label">Technologies</label>
         <div class="box-check" style="margin-top: 10px">
           <div class="box-check1">
-            <input type="checkbox" id="nodejs" value="nodejs" />
+            <input
+              type="checkbox"
+              id="nodejs"
+              value="nodejs"
+              onclick="choices('nodejs')"
+            />
             <span class="checkboxtext"> Node Js </span>
           </div>
           <div class="box-check2">
-            <input type="checkbox" id="reactjs" value="reactjs" />
+            <input
+              type="checkbox"
+              id="reactjs"
+              value="reactjs"
+              onclick="choices('reactjs')"
+            />
             <span class="checkboxtext"> React Js</span>
           </div>
         </div>
         <div class="box-check" style="margin-top: 20px">
           <div class="box-check1">
-            <input type="checkbox" id="vuejs" value="vuejs" />
+            <input
+              type="checkbox"
+              id="vuejs"
+              value="vuejs"
+              onclick="choices('vuejs')"
+            />
             <span class="checkboxtext"> Vue Js </span>
           </div>
           <div class="box-check2">
-            <input type="checkbox" id="typescript" value="typescript" />
+            <input
+              type="checkbox"
+              id="typescript"
+              value="typescript"
+              onclick="choices('typescript')"
+            />
             <span class="checkboxtext"> Type Script </span>
           </div>
         </div>
       </div>
+      <!-- Checkbox -->
 
       <!-- Image -->
       <div style="margin-top: 15px">
@@ -92,16 +115,23 @@
           <input type="file" id="input-image" hidden />
         </div>
       </div>
+      <!-- Image -->
 
       <div class="box">
         <button class="button">Submit</button>
       </div>
     </form>
+
     <!-- Form -->
     <div class="blog">
       <h1 class="text-project">My Project</h1>
       <div id="blogs" class="box-blog">
         <div class="box-blog1">
+          <img
+            src="./img/42013-rhoma-irama-dan-soneta.jpg"
+            class="image"
+            alt=""
+          />
           <h3>Judul</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, non.
