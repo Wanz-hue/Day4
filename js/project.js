@@ -24,6 +24,7 @@ function renderBlog() {
   document.getElementById("blogs").innerHTML = "";
   for (let i in blogs) {
     document.getElementById("blogs").innerHTML += `
+    <a href="./detail.html">
     <div class="box-blog1">
       <img
         src="${blogs[i].image}"
@@ -35,6 +36,7 @@ function renderBlog() {
         ${blogs[i].description}
       </p>
     </div>
+    </a>
         `;
   }
 }
