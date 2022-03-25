@@ -5,6 +5,46 @@ function addBlog(event) {
   let project = document.getElementById("input-project").value;
   let description = document.getElementById("input-description").value;
   let image = document.getElementById("input-image").files;
+  let nodejs = document.getElementById("nodejs").checked;
+  let reactjs = document.getElementById("reactjs").checked;
+  let vuejs = document.getElementById("vuejs").checked;
+  let python = document.getElementById("python").checked;
+  validation(project, description, image);
+  image = URL.createObjectURL(image[0]);
+  if (nodejs == true) {
+    nodejs = document.getElementById("nodejs").value;
+  } else {
+    nodejs = "";
+  }
+  if (reactjs == true) {
+    reactjs = document.getElementById("reactjs").value;
+  } else {
+    reactjs = "";
+  }
+  if (vuejs == true) {
+    vuejs = document.getElementById("vuejs").value;
+  } else {
+    vuejs = "";
+  }
+  if (python == true) {
+    python = document.getElementById("python").value;
+  } else {
+    python = "";
+  }
+  let blog = {
+    project: project,
+    description: description,
+    image: image,
+    nodejs: nodejs,
+    reactjs: reactjs,
+    vuejs: vuejs,
+    python: python,
+  };
+  blogs.push(blog);
+  renderBlog();
+}
+
+function validation(project, description, image) {
   if (project == "") {
     return alert("isikan form Project");
   } else if (description == "") {
@@ -12,14 +52,6 @@ function addBlog(event) {
   } else if (image.length == 0) {
     return alert("isikan gambar");
   }
-  image = URL.createObjectURL(image[0]);
-  let blog = {
-    project: project,
-    description: description,
-    image: image,
-  };
-  blogs.push(blog);
-  renderBlog();
 }
 
 function renderBlog() {
@@ -64,8 +96,10 @@ function renderBlog() {
       <p>
         ${blogs[i].description}
       </p>
-      <i class="fa-brands fa-node-js icon-size"></i>
-      <i class="fa-brands fa-react icon-size"></i>
+      <i class="${blogs[i].nodejs}"></i>
+      <i class="${blogs[i].reactjs}"></i>
+      <i class="${blogs[i].vuejs}"></i>
+      <i class="${blogs[i].python}"></i>
       <div class="button-group">
         <div class="button-child">
           <button class="button-edit">Edit</button>
