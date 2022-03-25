@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -63,41 +67,21 @@
         <label class="label">Technologies</label>
         <div class="box-check" style="margin-top: 10px">
           <div class="box-check1">
-            <input
-              type="checkbox"
-              id="nodejs"
-              value="nodejs"
-              onclick="choices('nodejs')"
-            />
+            <input type="checkbox" id="nodejs" value="nodejs" />
             <span class="checkboxtext"> Node Js </span>
           </div>
           <div class="box-check2">
-            <input
-              type="checkbox"
-              id="reactjs"
-              value="reactjs"
-              onclick="choices('reactjs')"
-            />
+            <input type="checkbox" id="reactjs" value="reactjs" />
             <span class="checkboxtext"> React Js</span>
           </div>
         </div>
         <div class="box-check" style="margin-top: 20px">
           <div class="box-check1">
-            <input
-              type="checkbox"
-              id="vuejs"
-              value="vuejs"
-              onclick="choices('vuejs')"
-            />
+            <input type="checkbox" id="vuejs" value="vuejs" />
             <span class="checkboxtext"> Vue Js </span>
           </div>
           <div class="box-check2">
-            <input
-              type="checkbox"
-              id="typescript"
-              value="typescript"
-              onclick="choices('typescript')"
-            />
+            <input type="checkbox" id="typescript" value="typescript" />
             <span class="checkboxtext"> Type Script </span>
           </div>
         </div>
@@ -121,8 +105,9 @@
         <button class="button">Submit</button>
       </div>
     </form>
-
     <!-- Form -->
+
+    <!-- Card -->
     <div class="blog">
       <h1 class="text-project">My Project</h1>
       <div id="blogs" class="box-blog">
@@ -140,9 +125,20 @@
             Dolores molestias pariatur, nobis consequatur quis qui? Illo, sed
             possimus?
           </p>
+          <i class="fa-brands fa-node-js icon-size"></i>
+          <i class="fa-brands fa-react icon-size"></i>
+          <div class="button-group">
+            <div class="button-child">
+              <button class="button-edit">Edit</button>
+            </div>
+            <div class="button-child">
+              <button class="button-delete">Delete</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Card -->
     <script src="./js/project.js"></script>
   </body>
 </html>

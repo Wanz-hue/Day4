@@ -78,3 +78,31 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: space-between;
 }
+.icon-size {
+  margin-left: 5px;
+  font-size: 20px;
+}
+.button-group {
+  display: flex;
+  margin-top: 10px;
+}
+.button-child {
+  flex: 50%;
+}
+.button-edit {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 45px;
+  margin-left: 18px;
+  border: none;
+  cursor: pointer;
+}
+.button-delete {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 40px;
+  cursor: pointer;
+  border: none;
+}
