@@ -1,9 +1,7 @@
+/* Card */
 .blog {
   width: 1200px;
   margin: 50px auto;
-}
-.text-project {
-  text-align: center;
 }
 .box-blog {
   display: flex;
@@ -12,16 +10,14 @@
   justify-content: start;
 }
 .box-blog1 {
+  /* harus pake width */
   width: 280px;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
   border: 1px solid rgb(232, 235, 235);
 }
-.image {
-  width: 100%;
-  border-radius: 5px;
-}
+/* Box */
 .box {
   display: flex;
   justify-content: end;
@@ -44,6 +40,11 @@
 }
 .box-check2 {
   flex: 50%;
+}
+/* Additional */
+.image {
+  width: 100%;
+  border-radius: 5px;
 }
 .checkboxtext {
   font-size: 110%;
@@ -105,4 +106,7 @@ input[type="checkbox"] {
   padding: 8px 40px;
   cursor: pointer;
   border: none;
+}
+.text-project {
+  text-align: center;
 }
