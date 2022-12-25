@@ -6,6 +6,12 @@
   border-radius: 5px;
   border: 1px solid rgb(209, 207, 207);
 }
+
+.imglogo{
+  width: 13%;
+  margin-right: 8%;
+
+}
 .input-email {
   background-color: rgb(232, 235, 235);
   width: 100%;
