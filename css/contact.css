@@ -23,7 +23,7 @@
   font-size: 20px;
 }
 .button {
-  background-color: black;
+  background-color: rgb(164, 11, 11);
   color: white;
   margin-top: 10px;
   border: none;
@@ -31,6 +31,7 @@
   border-radius: 5px;
   font-size: 12px;
   cursor: pointer;
+  float: right;
 }
 .form {
   width: 500px;

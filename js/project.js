@@ -58,7 +58,7 @@ function renderBlog() {
   document.getElementById("blogs").innerHTML = `
   <div class="box-blog1">
     <img
-      src="./img/42013-rhoma-irama-dan-soneta.jpg"
+      src="./img/images.jfif"
       class="image"
       alt=""
     /> 

@@ -2,7 +2,7 @@ body {
   margin: 0px;
 }
 nav {
-  background-color: #faf8f8;
+  background-color: rgb(177, 177, 177);
   display: flex;
   height: 8vh;
 }
@@ -24,7 +24,7 @@ nav .nav-kiri a {
   font-weight: bold;
 }
 nav .nav-kiri a:hover {
-  color: grey;
+  color: rgb(80, 107, 128);
   font-size: 16px;
 }
 /* Nav Kiri */
