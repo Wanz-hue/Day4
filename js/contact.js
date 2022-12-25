@@ -15,12 +15,12 @@ function submitdata() {
   } else if (message == "") {
     return alert("isikan message");
   }
-  let email_receiver = "hargiantofebrisena@gmail.com";
+  let email_receiver = "agungkurniawan211@gmail.com";
   let a = document.createElement("a");
   
 
   // Kasih Line baru %0D%0A
-  a.href = `mailto:${email_receiver}?subject=${subject}&body=Hello my name ${name},2C${subject},2C
+  a.href = `mailto:${email_receiver}?subject=${subject}&body=Hello my name ${name}%2C${subject}%2C
     %0D%0A${message}%0D%0A
     you can contact me in my email ${email} or you can call me in my number ${phone}`;
   a.click();
