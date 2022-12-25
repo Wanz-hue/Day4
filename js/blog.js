@@ -3,6 +3,8 @@ let blogs = [];
 function addBlog(event) {
   event.preventDefault();
   let project = document.getElementById("input-project").value;
+  let startDate = document.getElementById("input-startdate").value;
+  let endDate = document.getElementById("input-enddate").value;
   let description = document.getElementById("input-description").value;
   let image = document.getElementById("input-image").files;
   let nodejs = document.getElementById("nodejs").checked;
@@ -36,11 +38,14 @@ function addBlog(event) {
   let blog = {
     project: project,
     description: description,
+    startDate : startDate,
+    endDate : endDate,
     image: image,
     nodejs: nodejs,
     reactjs: reactjs,
     vuejs: vuejs,
     python: python,
+    
     
   };
   blogs.push(blog);
@@ -98,7 +103,7 @@ function renderBlog() {
         <a href="./detail.html">
         <h3>${blogs[i].project}</h3>
         </a>
-
+        <p>durasi: ${getDate(blogs[i].startDate, blogs[i].endDate)}</p>
         <p>
           ${blogs[i].description}
         </p>
@@ -118,6 +123,32 @@ function renderBlog() {
         `;
   
   }
+  function getDate(startDate , endDate) {
+    let timeStart = new Date(startDate)
+    let timeEnd = new Date(endDate)
+
+    let distance = timeEnd - timeStart
+
+    let monthDistance = Math.floor(distance / (30 * 24 * 60 * 60 * 1000))
+    if (monthDistance != 0) {
+        return monthDistance + ' Month'
+    } else {
+        let weekDistance = Math.floor(distance / (7 * 24 * 60 * 60 * 1000))
+        if (weekDistance != 0) {
+            return weekDistance + ' Week'
+        } else {
+            let daysDistance = Math.floor(distance / (24 * 60 * 60 * 1000))
+            if (daysDistance != 0) {
+                return daysDistance + ' Days'
+            } else {
+                return ' 1 Days'
+            }
+          
+        }
+      
+    }
+  
+}
 }
 
 
